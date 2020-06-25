@@ -26,6 +26,27 @@ export const getMoonByName = async (request, response) => {
   }
 }
 
+export const getMoonById = async (request, response) => {
+  try {
+    const { id } = request.params
+
+    const moon = await models.Moons.findOne({
+      attributes: ['id', 'name', 'newAndWaxing', 'full', 'waningAndDark'],
+      where: { id },
+      include: [{
+        model: models.Months,
+        attributes: ['id', 'name', 'affirmation'],
+      }],
+    })
+
+    return moon
+      ? response.send(moon)
+      : response.sendStatus(404)
+  } catch (error) {
+    return response.status(500).send('Error')
+  }
+}
+
 export const getMoonByMonth = async (request, response) => {
   try {
     const { monthId } = request.params

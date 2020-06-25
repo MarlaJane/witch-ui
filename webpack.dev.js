@@ -1,4 +1,3 @@
-  
 const path = require('path')
 const webpack = require('webpack')
 
@@ -23,7 +22,9 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      API_BASE_URL: JSON.stringify('http://localhost:1337/api'),
-    }),
-  ],
+      API_BASE_URL: JSON.stringify('http://localhost:1337/api')
+      // console.log('JSON.stringify('https://localhost:1337/api/'): ', JSON.stringify('https://localhost:1337/api/'));
+      // console.log('API_BASE_URL: JSON.stringify('https://localhost:1337/api/'): ', API_BASE_URL: JSON.stringify('https://localhost:1337/api/'));
+    })
+  ]
 }

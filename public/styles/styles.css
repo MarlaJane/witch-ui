@@ -1,13 +1,8 @@
-body {
-  background-color: blueviolet;
-  color: white;
-}
-
 .page {
   display: flex; 
   flex-direction: column; 
-  justify-content: center;
-  margin: 60 px auto 0;
+  justify-content: stretch;
+  margin: 40px auto 0;
   width: 60%;
 }
 
@@ -25,7 +20,8 @@ input {
   padding: 5px 8px;
   width: 250px;
 }
-.output {
+.month {
   font-size: 20px;
+  margin-bottom: 10px;
   text-align: center;
 }

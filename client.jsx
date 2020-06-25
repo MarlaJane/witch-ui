@@ -1,9 +1,16 @@
 import React from 'react'
 import { render } from 'react-dom'
-// import activities from './components/activities'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
+import MonthsPage from './pages/Months'
+import MoonsPage from './pages/Moons'
 
 render(
-  <div> Hi </div>,
-  // <activities />,
+  <BrowserRouter>
+    <Switch>
+      <Route path="/months" component={MoonsPage} />
+      <Route path="*" component={MonthsPage} />
+    </Switch>
+  </BrowserRouter>,
   document.getElementById('root'),
 )
