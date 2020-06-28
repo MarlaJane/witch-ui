@@ -24,7 +24,6 @@ module.exports = {
       { name: 'December', affirmation: 'I am safe and secure. I know and trust myself.', slug: 'dec' },
       { name: 'Situational', affirmation: 'I am full of magic. Wonderous things await me.', slug: 'misc' },
     ])
-    ç
     await queryInterface.bulkInsert('Moons', [
       // eslint-disable-next-line object-curly-newline
       { name: 'Wolf', newAndWaxing: 'Grounding, healing, and gaining knowledge about ones self', full: 'Self-acceptence, belonging, and belief in yourself and your power.', waningAndDark: 'Letting go of insecurties. Banishing ill health and bad luck.', monthId: 1 },

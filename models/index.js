@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize'
-import allConfigs from '../config/sequelize'
+import allConfigs from '../configs/sequelize'
 import monthsModel from './months'
 import moonsModel from './moons'
 import activitiesModel from './activities'

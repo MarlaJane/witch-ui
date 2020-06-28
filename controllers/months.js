@@ -15,7 +15,12 @@ export const getMonthByName = async (request, response) => {
     const { name } = request.params
 
     const foundName = await models.Months.findOne({
+      attributes: ['id', 'name', 'affirmation', 'slug'],
       where: { name },
+      include: [{
+        model: models.Moons,
+        attributes: ['id', 'name', 'newAndwaxing', 'full', 'waningAndDark'],
+      }],
     })
 
     return foundName
